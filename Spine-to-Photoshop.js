@@ -21,10 +21,19 @@ var defaultSettings = {
     jsonPath: "./assets/test.json",
 };
 
+var objectsInLayout = {};
+
 var jsonPath = defaultSettings.jsonPath;
 
 $.getJSON(jsonPath, function(json){
-    for (i in json){
-        console.log(i, " ",json[i]);
+    var obj = json["slots"];
+    var positions = json["skins"]["default"];
+    for (i in obj){
+        objectsInLayout[obj[i]["attachment"]] = {
+            "name":String(obj[i]["attachment"]),
+            "layer":obj[i]["layer"],
+            "pos":positions[obj[i]["attachment"]][obj[i]["attachment"]]
+        };
     }
+    console.log(objectsInLayout);
 });
