@@ -1,15 +1,3 @@
-var utilities = document.createElement('script');
-utilities.src = 'lib/utilities.js';
-document.head.appendChild(utilities);
-
-var underscore = document.createElement('script');
-utilities.src = 'lib/underscore.js';
-document.head.appendChild(underscore);
-
-var json2 = document.createElement('script');
-json2.src = 'lib/utilities.js';
-document.head.appendChild(json2);
-
 var defaultSettings = {
     ignoreHiddenLayers: false,
     ignoreBackground: true,
