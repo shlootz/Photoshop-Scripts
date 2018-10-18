@@ -1,1 +1,0 @@
-﻿//#target photoshop//app.bringToFront();   executeAction(sID("rasterizeAll"), undefined, DialogModes.NO); function sID (id) {	return stringIDToTypeID(id);}
